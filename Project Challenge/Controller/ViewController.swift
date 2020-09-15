@@ -69,11 +69,8 @@ extension ViewController: UITableViewDataSource {
         cell.journalLabel?.text = "Journal: " + articles[indexPath.row].journal
         cell.issnLabel?.text = "Issn: " + articles[indexPath.row].issn
         cell.typeLabel?.text = "Article type: " + articles[indexPath.row].article_type
-        cell.authorsLabel?.text = "Authors: "
-        
-        for author in articles[indexPath.row].authors {
-            cell.authorsLabel?.text?.append(author + ", ")
-        }
+        cell.authorsLabel?.text = "Author: " + articles[indexPath.row].authors[0]
+      
         return cell
     }
 }

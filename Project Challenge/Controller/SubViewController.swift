@@ -21,14 +21,7 @@ class SubViewController: UIViewController {
         journalLabel.text?.append(article!.journal)
         issnLabel.text?.append(article!.issn)
         typeLabel.text?.append(article!.article_type)
-        
-        var authorString: String = "Authors: "
-        for author in article!.authors {
-            authorString.append(author + ", ")
-        }
-        authorString = String(authorString.dropLast())
-        authorString = String(authorString.dropLast())
-        authorsLabel.text = authorString + "."
+        authorsLabel.text = "Author: " + (article?.authors[0])!
     }
     
     
